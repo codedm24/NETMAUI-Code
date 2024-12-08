@@ -38,6 +38,18 @@
             <Button x:Name="btnLinkNextPage2"
                     Text="Markup Extensions"
                     Clicked="OnBtnLinkNextPage2Clicked"/>
+
+            <Button x:Name="btnLinkNextPage3"
+                    Text="Data Binding 1"
+                    Clicked="OnBtnLinkNextPage3Clicked"/>
+            
+            <Button x:Name="btnLinkNextPage4"
+                    Text="Data Binding 2"
+                    Clicked="OnBtnLinkNextPage4Clicked"/>
+            
+            <Button x:Name="btnLinkNextPage5"
+                    Text="Data Binding 3"
+                    Clicked="OnBtnLinkNextPage5Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 

@@ -30,6 +30,21 @@
         {
             await Navigation.PushAsync(new MarkupExtensions());
         }
+
+        private async void OnBtnLinkNextPage3Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync (new DataBindingBasic1());
+        }
+
+        private async void OnBtnLinkNextPage4Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DataBindingBasic2());
+        }
+
+        private async void OnBtnLinkNextPage5Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DataBindingBasic3());
+        }
     }
 
 }
