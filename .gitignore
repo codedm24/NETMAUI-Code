@@ -7,3 +7,16 @@
 /Expenser.MauiAppl/.vs
 /Expenser.MauiAppl/Expenser.MauiAppl/bin/Debug
 /Phoneword/.vs/ProjectEvaluation
+
+# Ignore .vs and obj folders
+.vs/
+obj/
+bin/
+
+# Ignore other temporary files
+*.user
+*.suo
+*.userosscache
+*.userprefs
+*.tmp
+*.log
