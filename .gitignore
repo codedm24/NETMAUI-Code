@@ -2,12 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/Phoneword/Phoneword/bin/Debug
-/Phoneword/Phoneword/obj
-/Expenser.MauiAppl/.vs
-/Expenser.MauiAppl/Expenser.MauiAppl/bin/Debug
-/Phoneword/.vs/ProjectEvaluation
-
 # Ignore .vs and obj folders
 .vs/
 obj/
