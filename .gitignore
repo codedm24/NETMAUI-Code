@@ -14,3 +14,4 @@ bin/
 *.userprefs
 *.tmp
 *.log
+/MauiApp-XAML/MauiApp-XAML/obj
