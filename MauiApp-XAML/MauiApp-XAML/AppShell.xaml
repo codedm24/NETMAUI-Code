@@ -7,9 +7,43 @@
     Shell.FlyoutBehavior="Disabled"
     Title="MauiApp_XAML">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage" />-->
 
+    <!--<ShellContent
+       Title="Home"
+       ContentTemplate="{DataTemplate local:DataBindingBasic1}"
+       Route="DataBindingBasic1" />-->
+
+    <!--<ShellContent
+       Title="Home"
+       ContentTemplate="{DataTemplate local:DataBindingBasic2}"
+       Route="DataBindingBasic2" />-->
+
+    <!--<ShellContent
+       Title="Home"
+       ContentTemplate="{DataTemplate local:DataBindingBasic3}"
+       Route="DataBindingBasic3" />-->
+
+    <!--<ShellContent
+       Title="Home"
+       ContentTemplate="{DataTemplate local:DataBindingBasic4}"
+       Route="DataBindingBasic4" />-->
+
+    <!--<ShellContent
+      Title="Home"
+      ContentTemplate="{DataTemplate local:DataBindingBasic5}"
+      Route="DataBindingBasic5" />-->
+
+    <!--<ShellContent
+      Title="Home"
+      ContentTemplate="{DataTemplate local:DataBindingBasic6}"
+      Route="DataBindingBasic6" />-->
+
+    <ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:DataBindingBasic7}"
+    Route="DataBindingBasic7" />
 </Shell>

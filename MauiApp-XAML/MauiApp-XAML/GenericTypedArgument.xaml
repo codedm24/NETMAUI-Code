@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:scg="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             xmlns:models="clr-namespace:MauiApp_XAML.Models"
+             x:Class="MauiApp_XAML.GenericTypedArgument"
+             Title="GenericTypedArgument">
+   
+    <VerticalStackLayout>
+        <!--<CollectionView>
+            <CollectionView.ItemsSource>
+                <scg:List x:TypeArguments="x:String">
+                    <x:String>Item 1</x:String>
+                    <x:String>Item 2</x:String>
+                </scg:List>
+            </CollectionView.ItemsSource>
+        </CollectionView>-->
+        <!--<CollectionView>
+            <CollectionView.ItemsSource>
+                <scg:List x:TypeArguments="sys:String">
+                    <sys:String>Item 1</sys:String>
+                    <sys:String>Item 2</sys:String>
+                </scg:List>
+            </CollectionView.ItemsSource>
+        </CollectionView>-->
+        <!--<CollectionView>
+            <CollectionView.ItemsSource>
+                <scg:List x:TypeArguments="models:Country">
+                    <models:Country Name="India" Capital="New Delhi" FlagUrl="" />
+                    <models:Country Name="USA" Capital="Washington D.C." FlagUrl="" />
+                </scg:List>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Country">
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2" Source="{Binding FlagUrl}"
+                               Aspect="AspectFill" HeightRequest="60" WidthRequest="60"/>
+                        <Label Grid.Column="1" Text="{Binding Name}" FontAttributes="Bold"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Capital}" FontAttributes="Italic" VerticalOptions="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>-->
+        <CollectionView>
+            <CollectionView.ItemsSource>               
+                <scg:List x:TypeArguments="scg:KeyValuePair(sys:String,models:Country)">
+                    <scg:KeyValuePair x:TypeArguments="x:String,models:Country">
+                        <x:Arguments>
+                            <x:String>India</x:String>
+                            <models:Country Capital="New Delhi" FlagUrl=""/>
+                        </x:Arguments>
+                    </scg:KeyValuePair>
+                </scg:List>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="scg:KeyValuePair(sys:String,models:Country)">
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2"
+                               Source="{Binding Value.FlagUrl}"
+                               Aspect="AspectFill" HeightRequest="60" WidthRequest="60"/>
+                        <Label Grid.Column="1" Text="{Binding Key}" FontAttributes="Bold"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding Value.Capital}" FontAttributes="Italic" VerticalOptions="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>

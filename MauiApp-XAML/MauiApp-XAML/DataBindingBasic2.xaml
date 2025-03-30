@@ -20,6 +20,7 @@
                HorizontalOptions="Center"
                VerticalOptions="CenterAndExpand"/>
         <Slider x:Name="scaleSlider"
+                x:DataType="Label"
                 BindingContext="{x:Reference label}"
                 Grid.Row="1" Grid.Column="0"
                 Maximum="10"
@@ -29,6 +30,7 @@
                Grid.Row="1" Grid.Column="1"
                VerticalTextAlignment="Center"/>
         <Slider x:Name="rotationSlider"
+                x:DataType="Label"
                 BindingContext="{x:Reference label}"
                 Grid.Row="2" Grid.Column="0"
                 Maximum="360"

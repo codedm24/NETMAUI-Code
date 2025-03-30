@@ -66,6 +66,9 @@
 	  <Compile Update="EssentialProperties.xaml.cs">
 	    <DependentUpon>EssentialProperties.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="DataBindingBasic7.xaml.cs">
+	    <DependentUpon>DataBindingBasic7.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -78,7 +81,22 @@
 	  <MauiXaml Update="DataBindingBasic3.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="DataBindingBasic4.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="DataBindingBasic5.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="DataBindingBasic6.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="EssentialProperties.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="DataBindingBasic7.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GenericTypedArgument.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="MarkupExtensions.xaml">
