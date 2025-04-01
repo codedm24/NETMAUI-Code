@@ -50,7 +50,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>-->
-        <CollectionView>
+        <!--<CollectionView>
             <CollectionView.ItemsSource>               
                 <scg:List x:TypeArguments="scg:KeyValuePair(sys:String,models:Country)">
                     <scg:KeyValuePair x:TypeArguments="x:String,models:Country">
@@ -80,7 +80,7 @@
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
+        </CollectionView>-->
 
         <Label 
             Text="Welcome to .NET MAUI!"

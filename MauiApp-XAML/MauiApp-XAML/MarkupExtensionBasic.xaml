@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp_XAML"
+             xmlns:sys ="clr-namespace:System;assembly=netstandard"
+             x:Class="MauiApp_XAML.MarkupExtensionBasic"
+             x:Name="Page"
+             Title="MarkupExtensionBasic"
+             x:DataType="local:MarkupExtensionBasic">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="48"/>
+            <Setter Property="FontFamily" Value="OpenSansRegular"/>
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout x:Name="verticalStackLayout">
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center">
+            <Label.Background>
+                <x:StaticExtension Member="local:AppConstants.CustomBackgroundColor"/>
+            </Label.Background>
+        </Label>
+        <Entry Placeholder="Enter your name" TextColor="{x:Static Member=local:AppConstants.CustomForegroundColor}"/>
+        <Label x:DataType="ContentPage" Text="{Binding Source={x:Reference Page}, StringFormat='The type of this page is {0}'}"
+               FontSize="18" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Slider x:Name="slider" Maximum="360"  VerticalOptions="Center"/>
+        <Label x:DataType="Slider" BindingContext="{x:Reference slider}"
+               Text="{Binding Value, StringFormat='{0:F0}&#x00B0; rotation'}"
+               Rotation="{Binding Value}" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Button Text="Create a slider" Margin="10" HorizontalOptions="Center" VerticalOptions="Center"
+                Command="{Binding CreateCommand}" CommandParameter="{x:Type Slider}"/>
+        <Button Text="Create a stepper" Margin="10" HorizontalOptions="Center" VerticalOptions="Center"
+                Command="{Binding CreateCommand}" CommandParameter="{x:Type Stepper}"/>
+        <Button Text="Create a switch" Margin="10" HorizontalOptions="Center" VerticalOptions="Center"
+                Command="{Binding CreateCommand}" CommandParameter="{x:Type Switch}"/>
+        <Label Text="Label No. 2" x:Name="label1">
+            <Label.FontSize>
+                <x:StaticExtension Member="local:AppConstants.CustomNormalFontSize"/>
+            </Label.FontSize>
+        </Label>
+        <Label Text="&#x03C0; &#x00D7; E sized text"
+               FontSize="{x:Static sys:Math.PI}"
+               Scale="{x:Static sys:Math.E}"
+               HorizontalOptions="Center"/>
+        <ListView Margin="10">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type Color}">
+                    <Color>Aqua</Color>
+                    <Color>Black</Color>
+                    <Color>Blue</Color>
+                    <Color>Fuchsia</Color>
+                    <Color>Gray</Color>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="Color">
+                    <ViewCell>
+                        <BoxView Color="{Binding}" Margin="3"/>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Padding="10,0">
+            <Label Text="Text 1"/>
+            <Label Text="Text 2"/>
+            <Label Text="Text 3" FontFamily="{x:Null}"/>
+            <Label Text="Text 4" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
