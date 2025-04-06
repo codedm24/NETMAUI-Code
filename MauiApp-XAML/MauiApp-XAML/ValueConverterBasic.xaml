@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp_XAML"
+             x:Class="MauiApp_XAML.ValueConverterBasic"
+             Title="ValueConverterBasic">
+    <ContentPage.Resources>
+        <local:IntToBoolConverter x:Key="IntToBoolConverter"/>
+    </ContentPage.Resources>
+    <StackLayout Padding="10,0">
+        <Entry x:Name="entry1"
+               Text=""
+               Placeholder="enter search term"
+               VerticalOptions="Center"/>
+        <Button x:DataType="Entry"
+                Text="Search"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                IsEnabled="{Binding Source={x:Reference entry1},
+                Path=Text.Length, Converter={StaticResource IntToBoolConverter}}"/>
+        <Entry x:Name="entry2"
+               Text=""
+               Placeholder="Enter Description"
+               VerticalOptions="Center"/>
+        <Button x:DataType="Entry"
+                Text="Submit"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                IsEnabled="{Binding Source={x:Reference entry2},
+                Path=Text.Length, Converter={StaticResource IntToBoolConverter}}"/>
+    </StackLayout>
+</ContentPage>

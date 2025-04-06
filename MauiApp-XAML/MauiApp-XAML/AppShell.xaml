@@ -87,12 +87,17 @@
         <ShellContent Title="String Format" ContentTemplate="{DataTemplate local:StringFormattingBasic1}"/>
         <ShellContent Title="ViewModel Binding" ContentTemplate="{DataTemplate local:HslViewModelBinding}"/>
         <ShellContent Title="Path Format" ContentTemplate="{DataTemplate local:PathBindingBasic}"/>
+        <ShellContent Title="Value Converter" ContentTemplate="{DataTemplate local:ValueConverterBasic}"/>
+        <ShellContent Title="Converter Properties" ContentTemplate="{DataTemplate local:BindingConverterProperties}"/>
     </FlyoutItem>
     <TabBar>
         <Tab Title="Dashboard">
             <ShellContent ContentTemplate="{DataTemplate local:DataBindingBasic4}"/>
             <ShellContent ContentTemplate="{DataTemplate local:StringFormattingBasic1}"/>
             <ShellContent ContentTemplate="{DataTemplate local:HslViewModelBinding}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:PathBindingBasic}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:ValueConverterBasic}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:BindingConverterProperties}"/>
         </Tab>
     </TabBar>
 </Shell>
