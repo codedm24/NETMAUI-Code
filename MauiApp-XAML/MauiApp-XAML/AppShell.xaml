@@ -42,8 +42,57 @@
       ContentTemplate="{DataTemplate local:DataBindingBasic6}"
       Route="DataBindingBasic6" />-->
 
-    <ShellContent
+    <!--<ShellContent
     Title="Home"
     ContentTemplate="{DataTemplate local:DataBindingBasic7}"
-    Route="DataBindingBasic7" />
+    Route="DataBindingBasic7" />-->
+
+    <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:MarkupExtensionBasic}"
+    Route="MarkupExtensionBasic" />-->
+
+    <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:HslColorDemoPage}"
+    Route="HslColorDemoPage" />-->
+
+    <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:AttachedBehaviorBinding}"
+    Route="AttachedBehaviorBinding" />-->
+
+    <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:NumericBehaviorBinding}"
+    Route="NumericBehaviorBinding" />-->
+
+    <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:NumericValidationStyleBinding}"
+    Route="NumericValidationStyleBinding" />-->
+
+    <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:TintColorBinding}"
+    Route="TintColorBinding" />-->
+    
+        <!--<ShellContent
+    Title="Home"
+    ContentTemplate="{DataTemplate local:DataBindingModeBasic8}"
+    Route="DataBindingBasic8" />-->
+
+    <FlyoutItem Title="Menu">
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:DataBindingBasic1}"/>
+        <ShellContent Title="String Format" ContentTemplate="{DataTemplate local:StringFormattingBasic1}"/>
+        <ShellContent Title="ViewModel Binding" ContentTemplate="{DataTemplate local:HslViewModelBinding}"/>
+        <ShellContent Title="Path Format" ContentTemplate="{DataTemplate local:PathBindingBasic}"/>
+    </FlyoutItem>
+    <TabBar>
+        <Tab Title="Dashboard">
+            <ShellContent ContentTemplate="{DataTemplate local:DataBindingBasic4}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:StringFormattingBasic1}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:HslViewModelBinding}"/>
+        </Tab>
+    </TabBar>
 </Shell>

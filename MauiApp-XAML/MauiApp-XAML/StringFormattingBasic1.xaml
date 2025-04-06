@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             x:Class="MauiApp_XAML.StringFormattingBasic1"
+             Title="StringFormattingBasic1">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="BoxView">
+            <Setter Property="Color" Value="Blue"/>
+            <Setter Property="HeightRequest" Value="2"/>
+            <Setter Property="Margin" Value="0,5"/>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout Margin="10">
+        <Slider x:Name="slider1"/>
+        <Label 
+            x:DataType="Slider"
+            Text="{Binding Source={x:Reference slider1},
+                Path=Value,StringFormat='The slider value is {0:F2}'}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <BoxView/>
+        <TimePicker x:Name="timePicker"/>
+        <Label x:DataType="TimePicker"
+               Text="{Binding Source={x:Reference timePicker},Path=Time,StringFormat='The Time span is {0:C}'}"/>
+        <BoxView/>
+        <Entry x:Name="entry1"/>
+        <Label x:DataType="Entry"
+               Text="{Binding Source={x:Reference entry1}, Path=Text,StringFormat='The entry text is &quot;{0}&quot;'}"/>
+        <BoxView/>
+        <StackLayout x:DataType="sys:DateTime"
+                     BindingContext="{x:Static sys:DateTime.Now}">
+            <Label Text="{Binding}"/>
+            <Label Text="{Binding Path=Ticks, StringFormat='{0:NO} ticks since 1/1/1'}"/>
+            <Label Text="{Binding StringFormat='The {{0:MMMM}} specifier produces {0:MMMM}'}"/>
+            <Label Text="{Binding StringFormat='The long date is {0:D}'}"/>
+        </StackLayout>
+        <BoxView></BoxView>
+        <StackLayout x:DataType="sys:Double" BindingContext="{x:Static sys:Math.PI}">
+            <Label Text="{Binding}"/>
+            <Label Text="{Binding StringFormat='PI to 4 decimal points = {0:F4}'}"/>
+            <Label Text="{Binding StringFormat='PI in scientific notation = {0:E7}'}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

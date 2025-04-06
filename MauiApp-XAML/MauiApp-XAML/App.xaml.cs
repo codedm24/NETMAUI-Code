@@ -1,4 +1,5 @@
-﻿namespace MauiApp_XAML
+﻿
+namespace MauiApp_XAML
 {
     public partial class App : Application
     {
@@ -7,6 +8,18 @@
             InitializeComponent();
 
             MainPage = new AppShell();
+        }
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            //return base.CreateWindow(activationState);
+            Window window = base.CreateWindow(activationState);
+            window.Created += (s,e) =>
+            {
+                window.Title = "MauiApp-XAML";
+            };
+
+            return window;
         }
     }
 }

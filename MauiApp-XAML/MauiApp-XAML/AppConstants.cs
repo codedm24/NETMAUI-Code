@@ -10,5 +10,7 @@ namespace MauiApp_XAML
     {
         public static readonly Color CustomBackgroundColor = Colors.Aqua;
         public static readonly Color CustomForegroundColor = Colors.Brown;
+        public static readonly double CustomNormalFontSize = 18;
+             
     }
 }
