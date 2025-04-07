@@ -90,6 +90,8 @@
         <ShellContent Title="Value Converter" ContentTemplate="{DataTemplate local:ValueConverterBasic}"/>
         <ShellContent Title="Converter Properties" ContentTemplate="{DataTemplate local:BindingConverterProperties}"/>
         <ShellContent Title="Converter Parameter" ContentTemplate="{DataTemplate local:ConverterParameterBasic1}"/>
+        <ShellContent Title="Relative Binding" ContentTemplate="{DataTemplate local:RelativeBindingBasic1}"/>
+        <ShellContent Title="Relative Binding Ancestor" ContentTemplate="{DataTemplate local:RelativeBindingUsingAncestor}"/>
     </FlyoutItem>
     <TabBar>
         <Tab Title="Dashboard">
@@ -100,6 +102,8 @@
             <ShellContent ContentTemplate="{DataTemplate local:ValueConverterBasic}"/>
             <ShellContent ContentTemplate="{DataTemplate local:BindingConverterProperties}"/>
             <ShellContent ContentTemplate="{DataTemplate local:ConverterParameterBasic1}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:RelativeBindingBasic1}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:RelativeBindingUsingAncestor}"/>
         </Tab>
     </TabBar>
 </Shell>
