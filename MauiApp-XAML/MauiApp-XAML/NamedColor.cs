@@ -58,5 +58,32 @@ namespace MauiApp_XAML
             all.TrimExcess();
             All = all;
         }
+
+        public static string GetNearestColorName(Color inputColor)
+        {
+            NamedColor? closestColor = null;
+            double closestDistance = double.MaxValue;
+
+            foreach (NamedColor namedColor in All)
+            {
+                if (namedColor.Color == null) continue;
+
+                // Calculate the Euclidean distance between RGB values
+                double distance = Math.Sqrt(
+                    Math.Pow(namedColor.Red - inputColor.Red, 2) +
+                    Math.Pow(namedColor.Green - inputColor.Green, 2) +
+                    Math.Pow(namedColor.Blue - inputColor.Blue, 2));
+
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestColor = namedColor;
+                }
+            }
+
+            return closestColor?.Name ?? "Unknown";
+        }
     }
+
+
 }

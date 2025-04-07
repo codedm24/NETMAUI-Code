@@ -78,6 +78,9 @@
 	  <MauiXaml Update="BindingConverterProperties.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="ConverterParameterBasic1.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="DataBindingBasic1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
